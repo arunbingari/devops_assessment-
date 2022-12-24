@@ -20,6 +20,8 @@ services:
     - 'backend'
     expose:
     - '8000'
+    ports:
+    - '8080:8080'
     environment:
     - 'ISSUER_URL=http://localhost/keycloak/realms/app'
     - 'AUTH_URL=http://localhost/keycloak/realms/app/protocol/openid-connect/auth?client_id=app&response_type=code&redirect_uri=http://localhost/auth/callback'
